@@ -8,15 +8,17 @@
  *
  * Return: A pointer to the destination string @dest.
  */
-char *_strcpy(char *dest, const char *src)
+char *_strcpy(char *dest, char *src)
 {
-	int index = 0;
+	int i;
 
-	while (src[index] != '\0')
+	for (i = 0; *(src + 1) != '\0'; i++)
 	{
-		dest[index] = src[index];
-		index++;
+		dest[i] = *(src + 1);
 	}
-	dest[index] = '\0';
+	dest[i] = '\0';
+
 	return (dest);
 }
+
+
